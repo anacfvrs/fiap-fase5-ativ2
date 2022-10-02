@@ -66,6 +66,63 @@ body {
 
 /**------------- END HEADER -------------**/
 
+/**------------- CHAMADA -------------**/
+
+.chamada {  
+    background-color: var(--turquesa);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 12.5%;
+}
+
+
+.chamada .hotels {
+	text-align: left;
+}
+
+.hotels h1 {
+    color: var(--branco);
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
+
+    padding: 1em;
+}
+
+.hotels h1 em {
+    text-transform: uppercase;
+}
+
+
+.hotels p {
+    font-size: 1em;
+    padding: 1em;
+}
+
+/**------------- END CHAMADA -------------**/
+
+/**------------- INFORMAÇÕES -------------**/
+
+.info {  
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    margin: auto;
+
+    width: 100vw;
+    height: 100%;
+}
+
+
+.about1, .about2, .aboutimg .aboutmap {
+    width: 50%;
+  }
+
+/**------------- END INFORMAÇÕES -------------**/
+
 /***------------- FOOTER -------------**/
 .footer {
     display: flex;
