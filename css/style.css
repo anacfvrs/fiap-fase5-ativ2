@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&amp;family=Open+Sans+Condensed:wght@300&amp;display=swap');
 
-    /* variáveis que podem ser chamadas pelo css3 */
+    /* variaveis que podem ser chamadas pelo css3 */
     /* --nome-da-variavel: valor; */
 :root {  
     --branco: #fffcfd;
@@ -19,7 +19,7 @@ body {
 
 }
 
-.container { /* classe muito utilizada, pois se aplicará em todo o site */
+.container {
     padding-right: 6%;
     padding-left: 6%;
 }
