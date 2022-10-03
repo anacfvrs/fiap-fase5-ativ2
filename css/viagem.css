@@ -19,7 +19,7 @@ body {
 
 }
 
-.container { /* classe muito utilizada, pois se aplicará em todo o site */
+.container {
     padding-right: 6%;
     padding-left: 6%;
 }
@@ -65,12 +65,10 @@ body {
     margin-left: .7rem;
 }
 
-/**------------- END HEADER -------------**/
-
 /**------------- CHAMADA -------------**/
 
 .chamada {  
-    background-color: var(--turquesa);
+    background-color: var(--azul);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -103,26 +101,93 @@ body {
     padding: 1em;
 }
 
-/**------------- END CHAMADA -------------**/
+/**------------- GENERAL_INFO -------------**/
 
-/**------------- INFORMAÇÕES -------------**/
-
-.info {  
+.general_info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  }
+  
+  .img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .img-wrapper > img {
+    display: block; 
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .img-wrapper > .content{
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    inset: 0;
+    font-size: 2rem;
+    padding: 1rem;
+    background: var(--verde-agua);
     display: flex;
-    justify-content: space-between;
-    padding: 2em;
-    margin: auto;
-
-    width: 100vw;
-    height: 100%;
-}
-
-
-.about1, .about2, .aboutimg .aboutmap {
-    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-wrapper > img,
+  .img-wrapper > .content {
+    transition: 200ms ease-in-out;
+  }
+  
+  .img-wrapper:hover > img.blur {
+    filter: blur(4x);
+  }
+  
+  .img-wrapper > .content.fade {
+    opacity: 0;
+  }
+  .img-wrapper:hover > .content.fade {
+    opacity: 0.7;
   }
 
-/**------------- END INFORMAÇÕES -------------**/
+  .img-wrapper .title{
+    color: #000;
+    float: left;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-left: 1em;
+  }
+  
+  .img-wrapper p {
+    color: #fff;
+    float: left;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 2em;
+  }
+
+  .general_info .info {
+    width: 50%;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: none;
+    cursor: pointer;
+    background-color: #000;
+    border-radius: 5px;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 0.8em;
+  }
+  
+  .general_info .info:hover {
+    background-color: #050336;
+    letter-spacing: 1px;
+    transition: 0.5s;
+  }
+  
+
 
 /***------------- FOOTER -------------**/
 .footer {
@@ -161,9 +226,6 @@ body {
     font-size: 1.8em;
     margin-bottom: 0.5em;
   }
-/***------------- END FOOTER -------------**/
-
-
 
 @media screen and (min-width: 1024px) {
     .container {
