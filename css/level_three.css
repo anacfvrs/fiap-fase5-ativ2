@@ -87,10 +87,17 @@ body {
   .img-wrapper > img {
     transition: 200ms ease-in-out;
   }
-  
-  .img-wrapper:hover > img.blur {
-    filter: blur(4x);
-  }
+
+  .foto_grid .img-wrapper img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.foto_grid .img-wrapper:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
 
   /**------------- COMENTARIO -------------**/
 
