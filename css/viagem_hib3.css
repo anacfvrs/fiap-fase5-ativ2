@@ -25,6 +25,7 @@ body {
 }
 
 /**------------- HEADER -------------**/
+
 .header {
     color: var(--branco);
 
@@ -47,7 +48,6 @@ body {
 }
 
 .header_nav {
-    color: var(--azul);
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -55,6 +55,7 @@ body {
 }
 
 .header_link {
+    color: var(--azul);
     font-size: 1.1rem;
 
     display: inline-block;
@@ -62,6 +63,12 @@ body {
     margin-right: .7rem;
     margin-bottom: 1.25rem;
     margin-left: .7rem;
+}
+
+.header_link:hover {
+    color: var(--verde);
+    font-weight: bolder;
+    transition: 0.5s;
 }
 
 

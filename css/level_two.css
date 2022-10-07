@@ -9,6 +9,8 @@
     --verde-agua: #05d0c8; 
     --verde: #05f69a;
     --turquesa: #35d7d5; 
+    --amarelo: #E3AD1C;
+    --chumbo: rgb(20, 20, 20);
 }
 
 body {
@@ -48,42 +50,44 @@ body {
 }
 
 .header_nav {
-    color: var(--azul);
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
 }
 
 .header_link {
-    font-size: 1.1rem;
+  color: var(--azul);
+  font-size: 1.1rem;
 
-    display: inline-block;
+  display: inline-block;
 
-    margin-right: .7rem;
-    margin-bottom: 1.25rem;
-    margin-left: .7rem;
+  margin-right: .7rem;
+  margin-bottom: 1.25rem;
+  margin-left: .7rem;
+}
+
+.header_link:hover {
+  color: var(--verde);
+  font-weight: bolder;
+  transition: 0.5s;
 }
 
 /**------------- CHAMADA -------------**/
 
 .chamada {  
     background-color: var(--azul);
-    display: flex;
-    justify-content: space-around;
+    color: var(--branco);
+    display: block;
+    justify-content: center;
     align-items: center;
     width: 100vw;
     height: 12.5%;
+    text-align: center;
 }
 
-
-.chamada .hotels {
-	text-align: left;
-}
-
-.hotels h1 {
-    color: var(--branco);
-    letter-spacing: 0.1rem;
+.chamada h1 {
+    letter-spacing: 0.1em;
     font-weight: bold;
     font-size: 1.2em;
     font-family: 'Lato', sans-serif;
@@ -91,21 +95,24 @@ body {
     padding: 1em;
 }
 
-.hotels h1 em {
+.chamada h1 em {
     text-transform: uppercase;
+
 }
 
 
-.hotels p {
+.chamada p {
     font-size: 1em;
     padding: 1em;
+    padding-top: 0;
+    margin: auto;
 }
 
 /**------------- GENERAL_INFO -------------**/
 
 .general_info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(480px, 0.5fr));
   }
   
   .img-wrapper {
@@ -116,18 +123,17 @@ body {
   .img-wrapper > img {
     display: block; 
     width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    object-fit: fill;
     object-position: center;
   }
   
-  .img-wrapper > .content{
+  .img-wrapper > .content {
     font-family: 'Poppins', sans-serif;
     position: absolute;
     inset: 0;
-    font-size: 2rem;
+    font-size: 2em;
     padding: 1rem;
-    background: var(--verde-agua);
+    background: var(--chumbo);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,7 +141,7 @@ body {
   
   .img-wrapper > img,
   .img-wrapper > .content {
-    transition: 200ms ease-in-out;
+    transition: 0.4s ease-in-out;
   }
   
   .img-wrapper:hover > img.blur {
@@ -146,44 +152,49 @@ body {
     opacity: 0;
   }
   .img-wrapper:hover > .content.fade {
-    opacity: 0.7;
+    opacity: 0.8;
   }
 
-  .img-wrapper .title{
-    color: #000;
+  .img-wrapper .title {
+    width: 40%;
+    color: var(--branco);
     float: left;
+    text-align: right;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1em;
     text-transform: uppercase;
     padding-left: 1em;
   }
   
   .img-wrapper p {
-    color: #fff;
+    color: var(--branco);
+    line-height: 2em;
     float: left;
-    font-size: 20px;
+    font-size: 0.5em;
     font-weight: 500;
-    padding-left: 2em;
+    padding-left: 1.5em;
+  }
+
+  .img-wrapper p em {
+    font-weight: bold;
+    color: var(--branco);
   }
 
   .general_info .info {
-    width: 50%;
-    padding-left: 2em;
-    padding-right: 2em;
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    border-radius: 5px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1em;
     border: none;
     cursor: pointer;
-    background-color: #000;
-    border-radius: 5px;
-    font-style: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 0.8em;
   }
   
   .general_info .info:hover {
-    background-color: #050336;
-    letter-spacing: 1px;
+    background-color: var(--azul);
     transition: 0.5s;
   }
   
