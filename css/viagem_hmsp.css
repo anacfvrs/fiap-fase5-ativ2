@@ -64,6 +64,36 @@ body {
     margin-left: .7rem;
 }
 
+/**------------- FOTO GRID -------------**/
+
+
+.foto_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  }
+  
+  .img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .img-wrapper > img {
+    display: block; 
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .img-wrapper > img {
+    transition: 200ms ease-in-out;
+  }
+  
+  .img-wrapper:hover > img.blur {
+    filter: blur(4x);
+  }
+
+
 /**------------- FORMULARIO -------------**/
 
 .formulario{

@@ -64,6 +64,153 @@ body {
     margin-left: .7rem;
 }
 
+/**------------- FOTO GRID -------------**/
+
+.foto_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  }
+  
+  .img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .img-wrapper > img {
+    display: block; 
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .img-wrapper > img {
+    transition: 200ms ease-in-out;
+  }
+  
+  .img-wrapper:hover > img.blur {
+    filter: blur(4x);
+  }
+
+  /**------------- COMENTARIO -------------**/
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 5rem 0;
+    font-family: Heebo;
+    font-size: 40px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 980px;
+    margin: 0 auto;
+    grid-gap: 50px;
+    margin-bottom: 30px;
+}
+
+.card{
+    background-color: #fffcfd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 40px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.171);
+}
+
+.card .user{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card h3{
+    font-family: Rubik;
+    margin-bottom: 5px;
+}
+
+.nota{
+    width: 30px;
+    font-size: 15px;
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+}
+
+/**------------- FORMULARIO -------------**/
+
+.formulario{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1px 1px;
+    background: #35d7d5;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.formulario h2{
+    color: #f5f5f5;
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form label{
+    color: #f5f5f5;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+form input{
+    padding: 12px;
+    outline: none;
+    border: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+form input:focus{
+    border-radius: 16px;
+}
+form textarea{
+    padding: 10px;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+}
+form textarea:focus{
+    border-radius: 16px;
+}
+form a{
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #f5f5f5;
+    color: #f5f5f5;
+    transition: all 1s;
+    margin-bottom: 20px;
+}
+form a:hover{
+    background: #f5f5f5;
+    color: #101026;
+    border-radius: 16px;
+}
+
 
 /***------------- FOOTER -------------**/
 .footer {
